@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <span id="date"></span>&nbsp;|&nbsp; <span id="time"></span>
+    </div>
+    
+    <script>
+        //  Current Date and Time
+        var options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+        let currentDate = document.getElementById("date").innerHTML = new Date().toLocaleDateString("en-IN", options);    
+
+        setInterval(function(){
+            let currentTime = document.getElementById("time").innerHTML = new Date().toLocaleTimeString();
+        }, 1000);
+    </script>
+</body>
+</html>
